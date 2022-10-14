@@ -13,4 +13,4 @@ A disciplina pressupoe o estudo dos gerenciamentos das estruturas, tais como �
 ## Aulas 👀
 
 - [Aula 1](aula-01/README.md) - Apresentação da disciplina
-- Aula 2 -
+- [Aula 2](aula-02/README.md) - Criação de uma primeira estrutura
