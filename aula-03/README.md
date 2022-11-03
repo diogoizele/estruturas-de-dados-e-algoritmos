@@ -134,7 +134,7 @@ Há diferentes possibilidades de inserção:
 - Ordenada pela chave;
 - **Numa posição indicada pelo usuário**.
 
-> 💡 Num _arranjo_ de `MAX`posições, as posições válidas vão de `0` até `MAX - 1`.
+> 💡 Num _arranjo_ de `MAX` posições, as posições válidas vão de `0` até `MAX - 1`.
 
 Como inserir?
 Se a lista **não estiver cheia** e **índice** passado pelo usuário for válido:
@@ -145,7 +145,7 @@ Se a lista **não estiver cheia** e **índice** passado pelo usuário for válid
 - caso contrário **retorna _false_**.
 
 ```C
-bool inserirElemLista(LISTA* l, REGISTR reg, int i) {
+bool inserirElemLista(LISTA* l, REGISTRO reg, int i) {
     int j;
     if ((l->nroElem == MAX) || (i < 0) || (i > l->nroElem))
         return false;
