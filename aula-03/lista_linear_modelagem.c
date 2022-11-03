@@ -20,7 +20,7 @@ void inicializarLista(LISTA *l)
     l->nroElem = 0;
 }
 
-void tamanho(LISTA *l)
+int tamanho(LISTA *l)
 {
     return l->nroElem;
 }
