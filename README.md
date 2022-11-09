@@ -17,3 +17,4 @@ A disciplina pressupoe o estudo dos gerenciamentos das estruturas, tais como �
 - [Aula 2 - extra 1](aula-02-extra-1/) - Arranjos
 - [Aula 2 - extra 2](aula-02-extra-2/) - Estruturas um pouco mais complexas
 - [Aula 3](aula-03/) - Lista linear sequencial
+- [Aula 4](aula-04/) - Lista linear sequencial (continuação)
