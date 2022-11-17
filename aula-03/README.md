@@ -1,6 +1,6 @@
 # Aula 3 - Lista linear sequencial
 
-Uma lista linear é uma lista na qual a **ordem lógica** dos elementos (a ordem "vista"pelo usuário) é a mesma ordem física (em memória principal) dos elementos. Isto é, elementos vizinhos na lista estarão em posições vizinhas de memória.
+Uma lista linear é uma lista na qual a **ordem lógica** dos elementos (a ordem "vista" pelo usuário) é a mesma ordem física (em memória principal) dos elementos. Isto é, elementos vizinhos na lista estarão em posições vizinhas de memória.
 
 ### Modelagem ⛳️
 
