@@ -48,7 +48,7 @@ int addAtIndex(LIST *list, ITEM item, int index)
             printf("[erro] a lista já está cheia\n");
         else if (index < 0)
             printf("[erro] índice inválido - a menor posição válida é: 0\n");
-        else if (index > list->elementsAmount) // garante que não terão espaços vazios dentro do arranjo
+        else if (index > list->elementsAmount) // garante que não terão espaços vazios dentro do arranjo - lista linear SEQUENCIAL
             printf("[erro] índice inválido - maior que o número de elementos\n- elementsAmount: %d\n- index: %d\n", list->elementsAmount, index);
         return -1;
     }
