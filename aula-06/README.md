@@ -31,3 +31,30 @@ Na implementação dinâmica a alocação de elementos é feita sob demanda, ou 
 > - O endereço _2010_ guarda a chave `5` e aponta para o endereço _2310_;
 > - O endereco _2310_ guarda a chave `7` e aponta para o endereço _2050_;
 > - O endereço _2050_ guarda a chave `9` e aponta para `NULL`.
+
+### Implementação
+
+```C
+#include <stdio.h>
+#include <malloc.h>
+
+typedef int bool;
+typedef int TIPOCHAVE;
+
+typedef struct  {
+    TIPOCHAVE chave;
+    // outros campos...
+} REGISTRO;
+
+typedef struct aux {
+    REGISTRO reg;
+    struct aux* prox;
+} ELEMENTO;
+
+typedef ELEMENTO* PONT;
+
+typedef struct {
+    PONT inicio;
+} LISTA;
+
+```
