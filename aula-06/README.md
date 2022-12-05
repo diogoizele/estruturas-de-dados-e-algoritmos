@@ -58,3 +58,85 @@ typedef struct {
 } LISTA;
 
 ```
+
+### Inicialização
+
+Para inicializar a lista ligada, precisa-se:
+
+- Colocar o valor _`NULL`_ na variáve; **_início_**
+
+```C
+
+void inicializarLista(LISTA* l) {
+    l->inicio = NULL;
+}
+
+```
+
+### Retornar o número de elementos
+
+Já que optou-se por não criar um campo com o número de elementos na lista, precisa-se **percorrer todos os elementos** para contar quantos existem.
+
+```C
+
+int tamanho(LISTA* l) {
+    PONT end = l->inicio;
+    int tam = 0;
+    while (end != NULL) {
+        tam++;
+        end = end->prox;
+    }
+    return tam;
+}
+
+```
+
+### Exibição/Impressão
+
+Para exibir os elementos da estrutura precisaremos iterar pelos **elementos** e, por exemplo, **imprimir suas chaves**.
+
+```C
+
+void exibirLista(LISTA* l) {
+    PONT end = l->inicio;
+    printf("Lista: \" ");
+
+    while (end != NULL) {
+        printf("%i ", end->reg.chave);
+        end = end->prox;
+    }
+
+    printf("\"\n");
+}
+
+```
+
+### Buscar por elemento
+
+A função de busca deverá:
+
+- **Receber uma chave** do usuário;
+- **Retornar o endereço** em que este elemento se encontra (caso seja encontrado);
+- **Retornar _NULL_** caso não haja um registro com essa chave na lista.
+
+```C
+
+PONT buscaSequencial(LISTA* l, TIPOCHAVE ch) {
+    PONT pos = l->inicio;
+    while (pos != NULL) {
+        if (pos->reg.chave == ch) return pos;
+        pos = pos->prox;
+    }
+    return NULL;
+}
+
+// lista ordenada pelos valores das chaves dos registross
+
+PONT buscaSeqOrd(LISTA* l, TIPOCHAVE ch) {
+    PONT pos = l->inicio;
+    while (post != NULL && post->reg.chave < ch) pos = pos->prox;
+    if (post != NULL && post->reg.chave == ch) return pos;
+    return NULL;
+}
+
+```
