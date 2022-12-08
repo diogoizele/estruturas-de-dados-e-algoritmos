@@ -1,4 +1,4 @@
-# Estrutura de Dados - UNIVESP
+# Estrutura de Dados
 
 [**Playlist**](https://www.youtube.com/watch?v=y0B-vQI6Tiw&list=PL_JAaU8k6DQXxJ_HL_kiy8_jXzGs6e6EH) | Para ter acesso à playlist de vídeos da disciplina na íntegra acesse o [link](https://www.youtube.com/watch?v=y0B-vQI6Tiw&list=PL_JAaU8k6DQXxJ_HL_kiy8_jXzGs6e6EH).
 
