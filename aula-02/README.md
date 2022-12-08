@@ -1,137 +1,61 @@
 # Aula 2 - Criação de uma primeira estrutura
 
-### Criando uma estrutura simples
+## Criando uma estrutura simples
 
-Será visto que uma estrutura serve para guardar algumas informações
+_Struct_ - Estrutura de dados heterogênea, usada para representr o que em outras linguagens é chamado de **registro**. Em outras palavras, é uma coleção de variáveis referenciadas por um nome, sendo conveninente para manter informacões relacionadas agrupadas.
 
-Pelo fato da linguagem `Java` ter o paradigma de Orientação a Objetos, tudo trata-se de classes e objetos.
+- Cada uma das variáveis que compoem a _struct_ é chamada de membro (ou campo) da _struct_.
 
-Dessa forma, ao criar a estrutura [PesoAltura](./PesoAltura.java), estamos criando na verdade uma classe `PesoAltura` que poderá ser instanciada.
+```C
+struct Produto {
+    int codigo;
+    float preco;
+}
 
-```Java
-public class PesoAltura {
-    int peso; // peso em quilogramas
-    int altura; // altura em centimetros
+struct Dt_dma {
+    int dia, mes, ano;
 }
 ```
 
-Sendo assim, para possamos executar essa estrutura, necessitaremos instanciá-la dentro de alguma outra classe que possua o método `public static void main(String[] args)`.
-
-Já em `C`, como não se trata de uma linguagem orientada a objetos, não será criada uma classe, e sim uma `struct`. Criando então a estrutura [PesoAltura](./PesoAltura.c) em `C` teremos:
+Quando se declara a _struct_, um tipo de dado novo é criado, logo, deve-se declarar a variável do tipo _struct_.
 
 ```C
+struct Produto p1;
+struct Dt_dma hoje;
+```
+
+## Criando uma estrutura com typedef
+
+O comando `typedef` permite criar um novo tipo de dado, que pode ser usado em qualquer lugar onde um tipo de dado seja permitido.
+
+```C
+typedef struct {
+    int codigo;
+    float preco;
+} Produto;
 
 typedef struct {
-    int peso; // peso em quilogramas
-    int altura; // altura em centimetros
-} PesoAltura;
-
+    int dia, mes, ano;
+} Dt_dma;
 ```
 
-- A sintaxe `struct {...}` define uma estrutura com campos definidos dentro das chaves.
-- A sintaxe `typedef ... PesoAltura` defined o nome _PesoAltura_ para o que foi definido nas reticências.
-
-> 🌞 Em resumo, o comando `struct` cria a estrutura e o `typedef` dá nome a um novo tipo.
-
-Onde em `Java` teremos uma classe com **Atributos**, em `C` teremos uma estrutura com vários **campos**.
-
-## Constantes 🗒
-
-**Em Java**
-
-```Java
-    public static final int ALTURA_MAXIMA = 255;
-```
-
-**Em C**
+- O comando `typedef` cria um novo tipo de dado chamado `Produto` que é uma estrutura com os campos `codigo` e `preco`.
 
 ```C
-    #define ALTURA_MAXIMA 255
+Produto p1;
+Dt_dma dt1;
 ```
 
-## Função main 🍕
+Dessa forma, pode-se usar apenas o tipo criado na estrutura, e não _struct_ para declarar a variável.
 
-A função main é o local de início (_entry point_) da execução de um programa em C ou em Java. A mesma pode possuir alguns parâmetros que permitem a comunicação entre o programa em e o `shell`, através do sistema operacional.
+> 💡 Em resumo, o comando `struct` cria a estrutura e o `typedef` define um novo tipo.
 
-**Em Java**
-
-```Java
-public static void main(String[] args) {}
-```
-
-**Em C**
+### Atribuição
 
 ```C
-int main() {
-    //...
-    return 0;
-}
+p1.codigo = 104;
+dt1.ano = 2002;
 ```
-
-> 🚨 Diferente de Java, a função _main_ em C retorna um inteiro, geralmente sendo este o número 0, quando o código em questão executa corretamente.
-
-## Instanciação 🗡
-
-**Em Java**
-
-```Java
-PesoAltura pessoa1 = new PesoAltura();
-pessoa1.peso = 80;
-pessoa1.altura = 169;
-```
-
-**Em C**
-
-```C
-PesoAltura pessoa1;
-pessoa1.peso = 80;
-pessoa1.altura = 169;
-```
-
-Em _C_, ao declarar a variável _pessoa1_ do tipo PesoAltura, a linguagem já cria a estrutura, não criando um ponteiro para outro lugar da memória como é feito ao instanciar uma classe em Java.
-
-## Saída
-
-**Em Java**
-
-```Java
-System.out.print("Peso: " + pessoa1.peso + ", Altura: " + pessoa1.altura + ". ");
-```
-
-**Em C**
-
-```C
-printf("Peso: %i, Altura: %i. ", pessoa1.peso, pessoa1.altura);
-```
-
-> 💡 `%i`nesse caso significa que a variável a ser impressa é do tipo inteiro.
-
-## Uso de memória 🦵
-
-**Em Java**
-
-| variável     | valor |
-| ------------ | ----- |
-| alturaMaxima | 225   |
-| args         | 9742  |
-| pessoa1      | 3408  |
-
-| posições na memória | valor                 |
-| ------------------- | --------------------- |
-| 9742                |                       |
-| 3408                | peso: 80; altura: 169 |
-
-Como a linguagem _Java_ trabalha com ponteiros apontando para a memória, tanto a variável _args_, proveniente do método _main_ (que ao não possuir parâmetro na execução, não possui valor na memória), quanto a variável do tipo PesoAltura _pessoa1_ possuem o valor como sendo o endereço na memória onde de fato seus valores se encontram.
-
-**Em C**
-
-| variável | valor                 |
-| -------- | --------------------- |
-| pessoa1  | peso: 80; altura: 169 |
-
-Um dos motivos de porque o uso de memória é tão diferente nos nas duas soluções é que a implementação em C não corresponde totalmente à implementação em Java.
-
-Veja abaixo a forma para fazer uma implementação em _C_, semelhante a usada na linguagem _Java_.
 
 ## Ponteiros e alocação de memória ✒
 
@@ -142,18 +66,7 @@ Em **C** há uma distinção bastante explícita entre um tipo (ou uma estrutura
 
 O asterisco - \* - após a palavra _int_ indica que estamos falando de um endereço inteiro e não mais de um inteiro.
 
-Veja um [exemplo de ponteiro](ponteiros.c) onde:
-
-```C
-#include <stdio.h>
-int main() {
-    int x = 25;
-    int* y = &x;
-    *y = 30;
-    printf("Valor atual de X: %i\n", x); // O valor atual de X é 30
-    return 0;
-}
-```
+Veja um [exemplo de ponteiro](ponteiros.c)
 
 - A variável x é inicializada com o valor 25.
 - A variável y recebe o endereço onde está a variável x.
@@ -170,6 +83,20 @@ Nesse caso:
 - `&x` pega a posição de memória ou referência (ponteiro) da variável _x_;
 - `*y` pega o valor na memória referenciada por _y_
 
+### Struct e Ponteiro
+
+```C
+struct Dt_dma *p; // p é um ponteiro para registros de tipo Dt_dma
+struct Dt_dma dt1; // dt1 é uma variável do tipo Dt_dma
+p = &dt1; // p aponta para dt1
+p->ano = 2002; // atribui o valor 2002 ao campo ano da variável dt1
+(*p).ano = 2002; // atribui o valor 2002 ao campo ano da variável dt1
+```
+
+- O acesso ao membro de uma _struct_ pode ser feito de duas formas:
+  - `p->ano` - operador de acesso ao membro;
+  - `(*p).ano` - operador de acesso ao membro.
+
 ### malloc
 
 Em _C_ há uma função para alocação de memória: **malloc** (_memory allocation_)
@@ -179,3 +106,4 @@ Em _C_ há uma função para alocação de memória: **malloc** (_memory allocat
 - há um operador chamado **sizeof** que recebe como parâmetro um tipo (simples ou composto) e retorna a quantidade de bytes ocupada por esse tipo.
 
 - [Refatoração](PesoAltura.c) do código usando `malloc`.
+- [Veja aqui](comparativo-c-com-java.md) uma comparação entre as linguagens C e Java.

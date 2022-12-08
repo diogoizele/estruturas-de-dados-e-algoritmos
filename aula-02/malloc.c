@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <malloc.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -9,6 +9,6 @@ int main()
 
     int z = sizeof(int);
 
-    printf("*y=%i z=%i\n", *y, z);
+    printf("y=%p *y=%i &y=%p z=%i\n", y, *y, &y, z);
     return 0;
 }
