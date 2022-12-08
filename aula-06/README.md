@@ -140,3 +140,119 @@ PONT buscaSeqOrd(LISTA* l, TIPOCHAVE ch) {
 }
 
 ```
+
+### Inserção de um elemento
+
+O usuário passa como parâmetro um registro a ser inserido na lista.
+
+> 🚨 Será realizada a inserção **ordenada pelo valor da chave** do registro passado e não será permitida a inserção de elementos repetidos.
+
+- Na inserção, precisa-se identificar **entre quais elementos** o elemento novo será inserido.
+- **Alocação de memória** para o novo elemento.
+- Precisará conhecer quem será o **predecessor do elemento**.
+
+#### Inserção ordenada
+
+Será desenvolvida uma **função auxiliar** para procurar por uma dada chave e nos informar:
+
+- O **endereço desse elemento** se ele existir;
+- O **endereço** de quem seria o **predecessor** desse elemento (independentemente do elemento existir ou não na lista);
+- Como a função irá nos passar **dois endereços** diferentes?
+
+#### "Passando dois resultados"
+
+```C
+#include <stdio.h>
+
+int funcaoQuadradoCubo(int x, int* y) {
+    *y = x*x*x;
+    return x*x;
+}
+
+int main() {
+    int a = 30;
+    int cubo;
+    int quadrado = funcaoQuadradoCubo(a, &cubo);
+    printf("a: %i; a*a: %i; a*a*a: %i\n", a, quadrado, cubo);
+}
+
+```
+
+> 💡 Como não podemos retornar 2 valores em uma função, ao passar como segundo parâmetro um ponteiro, o que queremos fazer é, além de retornar um valor, modificar outra variável, como se fosse um "hackzinho" para 2 retornos.
+
+#### Busca - auxiliar
+
+```C
+PONT buscaSequencialExc(LISTA* l, TIPOCHAVE ch, PONT* ant) {
+    *ant = NULL;
+    PONT atual = l->inicio;
+    while ((atual != null) && (atual->reg.chave<ch)) {
+        *ant = atual;
+        atual = atual->prox;
+    }
+    if ((atual != NULL) && (atual->reg.chave == ch)) return atual;
+    return NULL;
+}
+
+```
+
+Após essa longa introdução, a inserçao de fato:
+
+### Inserção ordenada
+
+```C
+bool inserirElementoListaOrd(LISTA* l, REGISTRO reg) {
+    TIPOCHAVE ch = reg.chave;
+    PONT ant, i;
+
+    i = buscaSequancialExc(1, ch, &ant);
+    if (i != NULL) return false;
+    i = (PONT) malloc(sizeof(ELEMENTO));
+    i->reg = reg;
+    if (ant == NULL) {
+        i->prox = i->inicio;
+        i->inicio = i;
+    } else {
+        i->prox = ant->prox;
+        ant->prox = i;
+    }
+    return true;
+}
+```
+
+### Exclusão de um elemento
+
+O usuário passa a chave do elemento que ele quer excluir:
+
+- Se houver um elemento com esta chave na lista, **exclui este elemento** da llist, **acerta os ponteiros** envolvidos e retorna _true_;
+- Caso contrário, retorna _false_;
+- Para está função, precisa-se saber quem é o **predecessor** do elemento a ser excluído.
+
+```C
+bool excluirElemLista(LISTA* l, TIPOCHAVE ch) {
+    PONT ant, i;
+    i = buscaSequencialExc(l, ch, &ant);
+    if (i == NULL) return false;
+    if (ant == NULL) l->inicio = i->proximo;
+    else ant->prox = i->prox;
+    free(i);
+    return true;
+}
+```
+
+### Reinicialização da lista
+
+Para reinicializar a estrutura, precisa-se **excluir todos os seus elementos** e atualizar o campo **_inicio_** para _NULL_.
+
+```C
+void reinicializarLista(LISTA* l) {
+    PONT end = l->inicio;
+    while (end != NULL) {
+        PONT apagar = end;
+        end = end->prox;
+        free(apagar);
+    }
+    l->inicio = NULL;
+}
+
+```
