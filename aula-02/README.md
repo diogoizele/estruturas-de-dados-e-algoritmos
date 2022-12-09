@@ -107,3 +107,4 @@ Em _C_ há uma função para alocação de memória: **malloc** (_memory allocat
 
 - [Refatoração](PesoAltura.c) do código usando `malloc`.
 - [Veja aqui](comparativo-c-com-java.md) uma comparação entre as linguagens C e Java.
+- [Bubble Sort](bubble-sort.md) - Algoritmo para Ordenação
