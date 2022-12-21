@@ -16,3 +16,4 @@ Entretanto, não há nada nas definições desses bits que implique intrinsecame
 - [Hardware e Software](contents/hardware-e-software.md)
 - [O Conceito de Implementação](contents/o-conceito-de-implementacao.md)
 - [Um Exemplo](contents/um-exemplo.md)
+- [Tipos de Dados Abstratos](contents/tipos-de-dados-abstratos.md)
