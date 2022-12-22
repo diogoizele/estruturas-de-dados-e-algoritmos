@@ -17,3 +17,6 @@ Entretanto, não há nada nas definições desses bits que implique intrinsecame
 - [O Conceito de Implementação](contents/o-conceito-de-implementacao.md)
 - [Um Exemplo](contents/um-exemplo.md)
 - [Tipos de Dados Abstratos](contents/tipos-de-dados-abstratos.md)
+- [Sequências como Definições de Valores](contents/sequencias-como-definicoes-de-valores.md)
+- [Tipos de Dados em C](contents/tipos-de-dados-em-c.md)
+- [Ponteiros em C](contents/ponteiros-em-c.md)
