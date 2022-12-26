@@ -20,3 +20,4 @@ Entretanto, não há nada nas definições desses bits que implique intrinsecame
 - [Sequências como Definições de Valores](contents/sequencias-como-definicoes-de-valores.md)
 - [Tipos de Dados em C](contents/tipos-de-dados-em-c.md)
 - [Ponteiros em C](contents/ponteiros-em-c.md)
+- [Estrutura de Dados em C](contents/estrutura-de-dados-em-c.md)
