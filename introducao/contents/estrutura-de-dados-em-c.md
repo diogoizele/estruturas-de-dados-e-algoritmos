@@ -6,7 +6,7 @@ Por sua vez, o estudo das estruturas de dados envolve duas metas complementares.
 
 A **segunda meta** é determinar **representações** para essas entidades abstratas e implementar as operações abstratas sobre essas representações concretas.
 
-Nas próximas seções, examinaresmo várias estruturas de dados que já existem em C: o vetor e a estrutura. Descreveremos os recursos já disponíveis em C ppara a utilização desses recursos.
+Nas próximas seções, examinaresmo várias estruturas de dados que já existem em C: o vetor e a estrutura. Descreveremos os recursos já disponíveis em C para a utilização desses recursos.
 
 No restante deste livro, desenvolveremos estruturas de dados mais complexas e mostraremos sua utilidade na solução de problemas. Além disso ensinaremos a implementar essas estruturas de dados usando as estruturas de dados já disponíveis em C.
 
