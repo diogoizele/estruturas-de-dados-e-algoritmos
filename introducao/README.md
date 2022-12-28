@@ -22,3 +22,5 @@ Entretanto, não há nada nas definições desses bits que implique intrinsecame
 - [Ponteiros em C](contents/ponteiros-em-c.md)
 - [Estrutura de Dados em C](contents/estrutura-de-dados-em-c.md)
 - [Vetores em C](contents/vetores-em-c.md)
+- [Usando Vetores Unidimensionais](contents/usando-vetores-unidimensionais.md)
+- [Implementando Vetores Unidimensionais](contents/implementando-vetores-unidimensionais.md)
