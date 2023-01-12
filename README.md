@@ -6,4 +6,5 @@
 
 ## Índice
 
-- [Introdução](introducao/)
+- [Introdução](introduction/)
+- [Estrutura de dados](data-structure/)
