@@ -22,14 +22,13 @@ int main()
 
   // iterator starts in last position with element
   // in line 17 the position was incremented, so in the for below it is decreased
-  for (i = current_position - 1; i >= pos; i--)
+  for (i = current_position - 1; i > pos; i--)
   {
-    printf("\nStarts on position: %d, \n", i);
     printf("Replace element: arr[%d] = arr[%d]\n", i, i - 1);
-    printf("Element: %d to arr[%d] and  %d to arr[%d]\n", arr[i], i, arr[i - 1], i - 1);
+    printf("Element: arr[%d] = %d\n", i, arr[i - 1]);
     arr[i] = arr[i - 1];
   }
-  arr[pos - 1] = new_elem;
+  arr[pos] = new_elem;
 
   printf("\nArray elements after insertion\n");
   for (i = 0; i < current_position; i++)

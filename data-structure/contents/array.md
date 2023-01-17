@@ -88,10 +88,10 @@ int main() {
   pos = 4;
   n++;
 
-  for (i = n - 1; i >= pos; i--)
+  for (i = n - 1; i > pos; i--)
     arr[i] = arr[i - 1]
 
-  arr[pos - 1] = x;
+  arr[pos] = x;
 
   printf("Array's elements after insertion: ");
   for (i = 0; i < n; i++)
@@ -104,3 +104,70 @@ int main() {
 ```
 
 > É importante destacar que a matriz precisará ter espaço suficiente para armazenar o novo elemento. Se a matriz estiver cheia, não podemos inserir um novo elemento.
+
+## Operação de Exclusão
+
+Como o nome indica, esta operação remove um elemento da matriz e reorganizando os elementos restantes:
+
+```C
+#include <stdio.h>
+
+int main() {
+
+  int arr[] = {18, 30, 15, 70, 12};
+  int removed_index = 2, n = 5;
+  int i, j;
+
+  printf("Given array elements are:\n");
+
+  for (i = 0; i < n; i++)
+    printf("arr[%d]=%d ", i, arr[i]);
+
+  j = removed_index;
+
+  while (j < n) {
+    arr[j] = arr[j + 1];
+    j++;
+  }
+
+  n--;
+
+  printf("\nElements of array after deletion\n");
+
+  for (i = 0; i < n; i++)
+    printf("arr[%d]=%d, ", i, arr[i]);
+
+  return 0;
+}
+```
+
+## Operação de Pesquisa
+
+Esta operação é realizada para pesquisar um elemento na matriz com base no valor ou índice.
+
+```C
+#include <stdio.h>
+
+int main() {
+  int arr[] = {18, 30, 15, 70, 12};
+  int item = 70, i, j = 0, arr_length = 5;
+
+  printf("Given array elements are: \n");
+
+  for (i = 0; i < arr_length; i++)
+    printf("arr[%d]=%d ", i, arr[i]);
+
+  printf("\nElement to be searched = %d", item);
+
+  while (j < arr_length) {
+    if (arr[j] == item)
+      break;
+
+    j++;
+  }
+
+  printf("\nEnlement %d is found at %d position", item, j);
+
+  return 0;
+}
+```
