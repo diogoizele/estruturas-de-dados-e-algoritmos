@@ -1,10 +1,24 @@
 # Matriz (Array)
 
+> A ideia de um array é representar muitas instâncias em uma variável .
+
 Digamos que queremos armazenar as notas de todos os alunos de uma turma, podemos usar um array para armazená-las. Isso ajuda a reduzir o uso de várias variáveis, pois não precisamos criar uma variável separada para notas de cada disciplina. Todas as marcas podem ser acessadas simplesmente percorrendo a matriz.
 
-Uma matriz é uma estrutura de dados usada para armazenar **elementos homogêneos** em locais contíguos. O **tamanho** de uma matriz deve ser fornecido antes de armazenar os dados.
+Uma matriz é uma **estrutura de dados linear** usada para armazenar **elementos homogêneos** em locais contíguos. O **tamanho** de uma matriz deve ser fornecido antes de armazenar os dados.
 
 Na programação C, eles são os tipos de dados derivados que podem armazenar dados do tipo primitivo, como int, char, double, float, etc.
+
+## Vantagens
+
+- Arrays fornecem o nome único para o grupo de variaveis do mesmo tipo.
+- Percorrer um array é um processo muito simples, pois os elementos são armazenados em locais contíguos.
+- Qualquer elemento na matriz pode ser acessado diretamente usando o nome do array e o índice do elemento.
+
+## Desvantagens
+
+- A matriz é homogênea, ou seja, todos os elementos devem ser do mesmo tipo.
+- Na matriz, há alocações de memória estáticas, o que significa que o tamanho da matriz deve ser fornecido antes de armazenar os dados e não pode ser alterado.
+- Haverá desperdício de memória se armazenarmos menos elementos do que o tamanho declarado.
 
 ## Propriedades da matriz
 
@@ -171,3 +185,128 @@ int main() {
   return 0;
 }
 ```
+
+## Operação de Atualização
+
+Esta operação é realizada para atualizar um elemento na matriz com base no valor ou índice.
+
+```C
+#include <stdio.h>
+
+int main() {
+
+  int arr[5] = {18, 30, 15, 70, 12};
+  int item = 50, i, pos = 3;
+
+  printf("Given array elements are: \n");
+
+  for (i = 0; i < 5; i++)
+    printf("arr[%d]=%d ", i, arr[i]);
+
+  arr[pos] = item;
+
+  printf("\nElements of array after updation\n");
+
+  for (i = 0; i < 5; i++)
+    printf("arr[%d]=%d, ", i, arr[i]);
+
+  return 0;
+}
+```
+
+## Complexidade de tempo
+
+| Operação    | Caso médio | Pior caso |
+| ----------- | ---------- | --------- |
+| Acesso      | O(1)       | O(1)      |
+| Pesquisa    | O(n)       | O(n)      |
+| Inserção    | O(n)       | O(n)      |
+| Exclusão    | O(n)       | O(n)      |
+| Atualização | O(1)       | O(1)      |
+
+## Complexidade de espaço
+
+Na matrix/array, a complexidade de espaço para o pior caso é O(n), onde n é o número de elementos na matriz.
+
+## Aplicações da Estrutura de Dados Array
+
+- Arrays são usados para implementar listas, pilhas, filas, etc.
+- Arrays são usados para matrizes e outras implementações matemáticas.
+- Arrays são usados em tabelas de pesquisa de computadores.
+- Arrays podem ser usados para escalonamento de CPU.
+
+## Aplicações em Tempo Real
+
+- Listas de contatos em telefones celulares.
+- As matrizes são usadas em diferentes campos, como processamento de imagem, computação gráfica e muito mais.
+- Arrays são usados em portais de reserva de passagens online.
+- Páginas de livro.
+
+## Array Dinâmico em C
+
+Aqui está um exemplo de como redimensionar um array dinâmico em C:
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i;
+    int *p;
+
+    printf("Insira o tamanho inicial do array: ");
+    scanf("%d", &n);
+
+    p = (int *)malloc(n * sizeof(int)); // alocando memória para o array dinâmico
+
+    if (p == NULL) { // verificando se a alocação foi bem-sucedida
+        printf("Memória insuficiente!\n");
+        return 1;
+    }
+
+    for (i = 0; i < n; i++) {
+        printf("Insira o valor %d: ", i+1);
+        scanf("%d", &p[i]);
+    }
+
+    printf("Valores do array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", p[i]);
+    }
+    printf("\n");
+
+    int new_n;
+    printf("Insira o novo tamanho do array: ");
+    scanf("%d", &new_n);
+
+    p = (int *)realloc(p, new_n * sizeof(int)); // redimensionando o array
+
+    if (p == NULL) { // verificando se a alocação foi bem-sucedida
+        printf("Memória insuficiente!\n");
+        return 1;
+    }
+
+    if (new_n > n) {
+        for (i = n; i < new_n; i++) {
+            printf("Insira o valor %d: ", i+1);
+            scanf("%d", &p[i]);
+        }
+    }
+
+    printf("Valores do array redimensionado: ");
+    for (i = 0; i < new_n; i++) {
+        printf("%d ", p[i]);
+    }
+    printf("\n");
+
+    free(p); // liberando a memória alocada dinamicamente
+
+    return 0;
+}
+```
+
+O código acima solicita ao usuário para inserir o tamanho inicial do array, aloca a memória necessária usando malloc(), armazena valores inseridos pelo usuário no array, depois ele solicita o novo tamanho para o array, redimensionando o array com a função realloc() e, por fim, libera a memória usando free().
+
+Note que ao usar realloc, os valores anteriores são copiados para o novo endereço de memória alocado, caso o novo tamanho seja menor que o anterior alguns valores poderam ser perdidos.
+
