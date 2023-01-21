@@ -31,7 +31,7 @@ Existem algumas das propriedades de uma matriz listada a seguir:
 Arrays são uteis pois podemos:
 
 - Classificar e pesquisar um valor em uma matriz facilmente.
-- Os arrays sõa os melhores para processar vários valores de forma rápida e fácil.
+- Os arrays são os melhores para processar vários valores de forma rápida e fácil.
 - **As matrizes são boas para armazenar vários valores em uma única variável** - Na programação de computadores, a maioria dos casos requer o armazenamento de um grande número de dados de um tipo semelhante. Para armazenar tal quantidade de dados, precisamos definir um grande número de variáveis. Isso torna o programa muito grande e difícil de entender. Portanto, é melhor armazenar todos os dados em uma matriz.
 
 ## Alocação de Memória
@@ -40,7 +40,7 @@ Conforme declarado acima, todos os elementos são armazenados em locais contígu
 
 ## Acessando Elementos
 
-Exigimos as informações fornecidas abaixo para acessar qualquer elemento aleatório na matriz:
+Para acessar qualquer elemento aleatório na matriz, necessita-se saber:
 
 - Endereço base da matriz
 - Tamanho de um elemento em bytes
@@ -52,7 +52,7 @@ A fórmula para calcular o endereço para acessar um elemento da matriz:
 
 Aqui, o tamanho representa a memória ocupada pelos tipos de dados primitivos. Como instância, _int_ ocupa 2 bytes, _float_ ocupa 4 bytes de espaço de memória na programação C.
 
-## Notação O
+## Notação O - Big O Notation
 
 Deixe o tamanho da matriz ser n. Então, a complexidade de tempo para as operações básicas é:
 
@@ -60,6 +60,20 @@ Deixe o tamanho da matriz ser n. Então, a complexidade de tempo para as operaç
 - **Tempo de pesquisa**: O(n) - Para pesquisa sequencial: O(log n) para pesquisa binária (se a matriz estiver ordenada corretamente).
 - **Tempo de inserção**: O(n) - O pior caso ocorre quando a inserção acontece no início de uma matriz e requer a mudança de todos os elementos.
 - **Tempo de exclusão**: O(n) - O pior caso ocorre quando a exclusão acontece no início de uma matriz e requer a mudança de todos os elementos.
+
+## Complexidade de tempo
+
+| Operação    | Caso médio | Pior caso |
+| ----------- | ---------- | --------- |
+| Acesso      | O(1)       | O(1)      |
+| Pesquisa    | O(n)       | O(n)      |
+| Inserção    | O(n)       | O(n)      |
+| Exclusão    | O(n)       | O(n)      |
+| Atualização | O(1)       | O(1)      |
+
+## Complexidade de espaço
+
+Na matrix/array, a complexidade de espaço para o pior caso é O(n), onde n é o número de elementos na matriz.
 
 ## Operação Transversal
 
@@ -214,20 +228,6 @@ int main() {
 }
 ```
 
-## Complexidade de tempo
-
-| Operação    | Caso médio | Pior caso |
-| ----------- | ---------- | --------- |
-| Acesso      | O(1)       | O(1)      |
-| Pesquisa    | O(n)       | O(n)      |
-| Inserção    | O(n)       | O(n)      |
-| Exclusão    | O(n)       | O(n)      |
-| Atualização | O(1)       | O(1)      |
-
-## Complexidade de espaço
-
-Na matrix/array, a complexidade de espaço para o pior caso é O(n), onde n é o número de elementos na matriz.
-
 ## Aplicações da Estrutura de Dados Array
 
 - Arrays são usados para implementar listas, pilhas, filas, etc.
@@ -309,4 +309,3 @@ int main()
 O código acima solicita ao usuário para inserir o tamanho inicial do array, aloca a memória necessária usando malloc(), armazena valores inseridos pelo usuário no array, depois ele solicita o novo tamanho para o array, redimensionando o array com a função realloc() e, por fim, libera a memória usando free().
 
 Note que ao usar realloc, os valores anteriores são copiados para o novo endereço de memória alocado, caso o novo tamanho seja menor que o anterior alguns valores poderam ser perdidos.
-
