@@ -8,5 +8,6 @@
 | [Operação de inserção](array/operacao-insercao.c)                    |
 | [Operação de pesquisa](array/operacao-pesquisa.c)                    |
 | [Operação transversal](array/operacao-transversal.c)                 |
+| [Operações](array/operacoes.c)                                       |
 | [Ponteiros](array/pointer.c)                                         |
 | [Push Back](array/push_back.c)                                       |
