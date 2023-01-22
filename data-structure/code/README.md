@@ -1,12 +1,12 @@
 # Exercícios
 
-| Array                                                          |
-| -------------------------------------------------------------- |
-| [Adicionar números em um array ](adicionar-numeros-no-array.c) |
-| [Operação de exclusão - parte 1](operacao-exclusao.c)          |
-| [Operação de exclusão - parte 2](operacao-exclusao-2.c)        |
-| [Operação de inserção](operacao-insercao.c)                    |
-| [Operação de pesquisa](operacao-pesquisa.c)                    |
-| [Operação transversal](operacao-transversal.c)                 |
-| [Ponteiros](pointer.c)                                         |
-| [Push Back](push_back.c)                                       |
+| Array                                                                |
+| -------------------------------------------------------------------- |
+| [Adicionar números em um array ](array/adicionar-numeros-no-array.c) |
+| [Operação de exclusão - parte 1](array/operacao-exclusao.c)          |
+| [Operação de exclusão - parte 2](array/operacao-exclusao-2.c)        |
+| [Operação de inserção](array/operacao-insercao.c)                    |
+| [Operação de pesquisa](array/operacao-pesquisa.c)                    |
+| [Operação transversal](array/operacao-transversal.c)                 |
+| [Ponteiros](array/pointer.c)                                         |
+| [Push Back](array/push_back.c)                                       |
