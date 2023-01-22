@@ -168,12 +168,58 @@ void reverse(int **arr, int length)
 
     for (int i = 0; i < repeat; i++)
     {
-        int last_index = length - 1 - i;
-        int first = (*arr)[i];
-        int last = (*arr)[last_index];
-        (*arr)[i] = (*arr)[last_index];
-        (*arr)[last_index] = first;
+        int temp = (*arr)[i];
+
+        (*arr)[i] = (*arr)[length - 1 - i];
+        (*arr)[length - 1 - i] = temp;
     }
+}
+
+int arr_remove(int **arr, int *p_length, int index)
+{
+    int *new_arr = (int *)malloc(sizeof(int) * (*p_length) - 1);
+    int i;
+
+    if (new_arr == NULL)
+    {
+        printf("\nMemory allocation failure");
+        return -1;
+    }
+
+    for (i = 0; i < index; i++)
+        new_arr[i] = (*arr)[i];
+
+    for (i = *p_length; i > index; i--)
+        new_arr[i - 1] = (*arr)[i];
+
+    (*arr) = new_arr;
+
+    (*p_length)--;
+
+    return *p_length;
+}
+
+int arr_pop(int **arr, int *p_length)
+{
+    int i, last;
+    int *new_arr = (int *)malloc(sizeof(int) * (*p_length) - 1);
+
+    if (new_arr == NULL)
+    {
+        printf("\nMemory allocation failed\n");
+        return -1;
+    }
+
+    for (i = 0; i < *p_length - 1; i++)
+        new_arr[i] = (*arr)[i];
+
+    last = (*arr)[i];
+
+    (*arr) = new_arr;
+
+    (*p_length)--;
+
+    return last;
 }
 
 int main()
@@ -219,6 +265,14 @@ int main()
     arr_print(arr, size);
 
     reverse(&arr, size);
+    arr_print(arr, size);
+
+    arr_remove(&arr, &size, 9);
+    arr_print(arr, size);
+
+    int last_item_removed = arr_pop(&arr, &size);
+    printf("\nlast element removed with arr_pop: %d", last_item_removed);
+
     arr_print(arr, size);
 
     return 0;
