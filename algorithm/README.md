@@ -1,6 +1,6 @@
 # Algoritmos
 
-| Operação  | Código                               |
+| Operação  | Conteúdo                             |
 | --------- | ------------------------------------ |
 | Traversal | [Clique aqui](operacao-traversal.md) |
 | Inserção  | [Clique aqui](operacao-insercao.md)  |
