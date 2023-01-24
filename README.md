@@ -8,3 +8,4 @@
 
 - [Introdução](introduction/)
 - [Estrutura de dados](data-structure/)
+- [Algoritmos](algorithm/)
