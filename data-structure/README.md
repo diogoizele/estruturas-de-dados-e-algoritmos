@@ -8,6 +8,6 @@ Como o próprio nome indica, uma Estrutura de Dados é uma forma de organizar os
 - [Principais Operações](contents/principais-operacoes.md)
 - [Introdução às Estruturas de Dados Lineares](contents/introducao-a-estruturas-de-dados-lineares.md)
 - - [Array](array/)
-- - [Lista Encadeada](contents/lista-encadeada.md)
+- - [Lista Encadeada](linked-list/)
 - - [Pilha (Stack)](contents/pilha.md)
 - - [Fila (Queue)](contents/fila.md)
