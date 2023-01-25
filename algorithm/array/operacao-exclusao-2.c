@@ -8,8 +8,7 @@ int main() {
 
   printf("Given array elements are:\n");
 
-  for (i = 0; i < n; i++) 
-    printf("arr[%d]=%d ", i, arr[i]);
+  for (i = 0; i < n; i++) printf("arr[%d]=%d ", i, arr[i]);
 
   j = removed_index;
 
@@ -22,8 +21,7 @@ int main() {
 
   printf("\nElements of array after deletion\n");
 
-  for (i = 0; i < n; i++) 
-    printf("arr[%d]=%d, ", i, arr[i]);
+  for (i = 0; i < n; i++) printf("arr[%d]=%d, ", i, arr[i]);
 
   return 0;
 }
