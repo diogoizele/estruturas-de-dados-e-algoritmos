@@ -19,10 +19,11 @@ Um algoritmo é um conjunto de instruções que descreve como resolver uma class
 
 ## Conceitos introdutórios
 
-Na computação, a unidade básica de informação é o **bit**, cujo valor compreende uma entre duas possibilidades mutuamente exclusivas. A ideia é análoga a um interruptor que pode estar ligado ou desligado.
+Na computação, a unidade básica de informação é o **bit**, cujo valor compreende uma entre duas possibilidades mutuamente exclusivas. A ideia é análoga a um interruptor que pode estar ligado ou desligado. Abaixo estará esse e alguns outros conceitos introdutórios que serão necessários para o entendimento dos tópicos abordados no repositório.
 
 - [Bit](src/intro-concepts/bit-and-byte/bit.md)
 - [Byte](src/intro-concepts//bit-and-byte/byte.md)
+- [Inteiros binários e decimais](src/intro-concepts/data-types/binary-and-decimal-integer.md)
 
 ### Notação Grande O - Big O Notation
 
