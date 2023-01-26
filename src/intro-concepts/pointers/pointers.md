@@ -1,6 +1,6 @@
 # Ponteiros
 
-Na realidade, C permite que o programador referencie a posição de objetos bem como os próprios objetos (isto é, o conteúdo de suas posições). Por exemplo, se _x_ for declarado como um inteiro, _&x_ se referirá à posição reservada para conter _x_. _&x_ é chamado **_ponteiro_**.
+C, como algumas poucas linguagens, permite que o programador referencie a posição de objetos bem como os próprios objetos (isto é, o conteúdo de suas posições). Por exemplo, se _x_ for declarado como um inteiro, _&x_ se referirá à posição reservada para conter _x_. _&x_ é chamado **_ponteiro_**.
 
 ![Ponteiro](../../../assets/pointer.png)
 
@@ -35,38 +35,6 @@ De modo semelhante, se o valor da variável _pc_ é 100 (lembre-se de que _pc_ �
 > 🚨 Observe também a diferença entre _\*pi_ + 1, que se refere a 1 somado ao inteiro _\*pi_, e \*(_pi_ + 1), que se refere ao inteiro posterior ao inteiro na posição referenciada por _pi_.
 
 Uma área na qual os ponteiros de C desempenham um notável papel é na passagem de parâmetros para funções. Normalmente, os parâmetros são passados para uma função por C _por valor_, isto é, os valores sendo passados são copiados nos parâmetros da função chamada no momento em que a função for chamada. Se o valor de um parâmetro for alterado dentro da função, o valor no programa de chamada não será modificado. Por exemplo, examine o seguinte segmento de programa e função:
-
-```C
-x = 5;
-printf("%d\n", x);
-funct(x);
-printf("%d\n", x);
-
-funct(y) int y;
-{
-    ++y;
-    printf("%d\n", y);
-} /* end funct */
-```
-
-Aa linha 2 imprime 5 e, em seguida, a linha 3 chama _funct_. O valor de _x_ que é copiado em _y_ e _funct_ começa a execução. A linha 9 imprime 6 e _funct_ retorna. Entretanto, quando a linha 8 incrementa o valor de _y_, o valor de _x_ permanece inalterado. Dessa forma, a linha 4 imprime 5. _x_ e _y_ referem-se a duas variáveis diferentes que tem o mesmo valor no início de _funct_. _y_ pode mudar independente de _x_.
-
-Se quisermos usar _funct_ para modificar o valor de _x_, precisaremos passar o endereço de _x_ como segue:
-
-```C
-x = 5;
-printf("%d\n", x);
-funct(&x);
-printf("%d\n", x);
-
-funct(py) int *py;
-{
-    ++(*py);
-    printf("%d\n", *py);
-} /* end funct */
-```
-
-A linha 2 imprime novamente 5, e a linha 3 chama _funct_. Entretanto, o valor passado agora não é o valor inteiro de _x_, mas o valor do ponteiro _&x_. Esse é o endereço de _x_. O parâmetro de _funct_ não é mais _y_ de tipo int, mas _py_ de tipo **_int\*_**. (É conveniente nomear as variáveis de ponteiro começando com a letra _p_ para lembrar ao programador e ao leitor do programa que ela é um ponteiro. Entretanto, isso não é uma exigência da linguagem C e poderíamos ter chamado de _y_ o parâmetro do tipo ponteiro). Agora, a linha 8 incrementa o inteiro na posição _py_. Contudo, em si mesmo, _py_ não é alterado e mantém seu valor inicial, que é &x. Dessa forma, _py_ aponta para o inteiro _x_ de modo que, quando _\*py_ for incrementado, _x_ será incrementado. A linha 9 imprime 6 e _funct_ retorna, a linha 4 imprime 6 também. Os ponteiros representam o mecanismo usado em C para permitir que uma função chamada modifique variáveis numa função chamada (ou chamadora).
 
 ## Detalhes do ponteiro
 
