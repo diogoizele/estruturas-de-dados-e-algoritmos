@@ -1,5 +1,0 @@
-# Strings de Caracteres em C
-
-Em C, uma string é definida como um vetor de caracteres. Cada string é encerrada com um caractere _NULL_, que indica o final da string. Uma **constante** string é indicada por qualquer conjunto de caracteres entre aspas. O caractere _NULL_ é automaticamente incluído no final dos caracteres dentro de uma constante string, quando eles são armazenados. Dentro de um programa, o caractere _NULL_ é indicado pela _sequência de escape_ \\0. Outras sequências de escape que podem ser usadas são: \\n, para nova linha, \\t, para tabulação, \\b, para retrocesso, \\r, para retorno de cursor, \\f, para avanço de página, \\\\', para aspas simples, \\\\", para aspas duplas, \\\\, para barra invertida, \\?, para interrogação, \\a, para alerta, \\v, para tabulação vertical, \\ooo, para o caractere octal ooo, \\xhh, para o caractere hexadecimal hh.
-
-Uma constante string representa um valor cujo limite mínimo é 0 e o limite máximo é o número de caracteres na string. Por exemplo, a string "HELLO THERE" é um vetor de 12 elementos (o espaço em branco e o \\0 **contam** como um caractere cada).

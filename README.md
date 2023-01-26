@@ -25,6 +25,7 @@ Na computação, a unidade básica de informação é o **bit**, cujo valor comp
 - [Byte](src/intro-concepts//bit-and-byte/byte.md)
 - [Inteiros binários e decimais](src/intro-concepts/data-types/binary-and-decimal-integer.md)
 - [Números reais](src/intro-concepts/data-types/floating-numbers.md)
+- [Strings e caracteres](src/intro-concepts/data-types/strings-and-chars.md)
 
 ### Notação Grande O - Big O Notation
 
