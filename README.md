@@ -1,11 +1,18 @@
-# Estrutura de Dados
+# Estrutura de Dados e Algoritmos
 
-**Estruturas de Dados Usando C**
+## Visão geral
 
-> Um computador é uma máquina que manipula informações. O estudo da ciência da computação inclui o exame da organização, manipulação e utilização destas informações num computador.
+Este repositório busca reunir, implementar e documentar toda minha tragetória num estudo minucioso em torno das mais diversas estruturas de dados e os algoritmos que as manipulam.
 
-## Índice
+## Recursos
 
-- [Introdução](introduction/)
-- [Estrutura de dados](data-structure/)
-- [Algoritmos](algorithm/)
+- [Estruturas de dados](src/data-structure/)
+- [Algoritmos](src/algorithms/)
+
+## Estruturas de dados
+
+Uma estrutura de dados é uma forma específica de organizar e armazenar dados em um computador para que possam ser acessador e manipulados de forma eficiente.
+
+## Algoritmos
+
+Um algoritmo é um conjunto de instruções que descreve como resolver uma classe de problemas. Sendo assim, trata-se de um conjunto de regras que definem precisamente uma sequência de operações.
