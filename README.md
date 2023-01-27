@@ -28,8 +28,9 @@ Na computação, a unidade básica de informação é o **bit**, cujo valor comp
 - [Strings e caracteres](src/intro-concepts/data-types/strings-and-chars.md)
 - [Hardware e software](src/intro-concepts/hardware-and-software/hardware-and-software.md)
 - [Ponteiros](src/intro-concepts/pointers/pointers.md)
+- [Arranjos](src/intro-concepts/array/array.md)
 
-### Notação Grande O - Big O Notation
+### Notação O - Big O Notation
 
 A notação Grande O é usada para descrever o comportamento de um algoritmo em termos de seu crescimento. Ela é usada para descrever o pior caso de desempenho de um algoritmo.
 
