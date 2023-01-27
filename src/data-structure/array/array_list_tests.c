@@ -16,11 +16,11 @@ int ArrayListTests() {
 
   ArrayList *list = create(10);
 
-  // for (i = 0; i < list->size; i++) {
-  //   insert(list, i, i + 1);
-  // }
+  for (i = 0; i < list->size; i++) {
+    insert(list, i, i + 1);
+  }
 
-  // print(list);
+  print(list);
 
   return SUCCESS;
 }
