@@ -103,13 +103,12 @@ int swap(ArrayList *list, int index1, int index2) {
 int reverse(ArrayList *list) {
   for (int i = 0; i < list->size / 2; i++) {
     swap(list, i, list->size - i - 1);
-
-    return SUCCESS;
   }
+  return SUCCESS;
 }
 
 int print(ArrayList *list) {
-  printf("\nArrayList = [\n");
+  printf("\nArrayList = [ ");
   for (int i = 0; i < list->size; i++) {
     printf("%d", list->array[i]);
 

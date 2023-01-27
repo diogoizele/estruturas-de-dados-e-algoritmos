@@ -81,7 +81,7 @@ int max(ArrayList *list);
 // |          Print array.         |
 // *-------------------------------*
 
-void print(ArrayList *list);
+int print(ArrayList *list);
 
 #ifdef __cplusplus
 }
