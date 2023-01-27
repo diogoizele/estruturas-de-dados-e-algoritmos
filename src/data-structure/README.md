@@ -1,8 +1,6 @@
 # Estruturas de dados
 
-Uma estrutura de dados é uma maneira particular de organizar os dados em um computador para que possam ser usados de forma eficaz. A ideia é reduzir as complexidades de espaço e tempo de diferentes tarefas.
-
-Estruturas de dados não está atribuída à uma linguagem de programação específica como C, C++, Java, etc. É um conjunto de algoritmos que podemos usar em qualquer linguagem de programação para estruturar dados na memória.
+Uma estrutura de dados é uma maneira particular de organizar os dados em um computador para que possam ser usados de forma eficaz. A ideia é reduzir as complexidades de espaço e tempo de diferentes tarefas. Estruturas de dados não está atribuída à uma linguagem de programação específica como C, C++, Java, etc. É um conjunto de algoritmos que podemos usar em qualquer linguagem de programação para estruturar dados na memória.
 
 ## Estruturas lineares
 
