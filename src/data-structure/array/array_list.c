@@ -118,3 +118,105 @@ int print(ArrayList *list) {
 
   return SUCCESS;
 }
+
+int blenderSort(ArrayList *list) {
+  srand(time(NULL) * list->size);
+  int total = list->size * 100;
+
+  for (int i = 0; i < total; i++) {
+    swap(list, rand() % list->size, rand() % list->size);
+  }
+
+  return SUCCESS;
+}
+
+int bubbleSort(ArrayList *list) {
+  int i, j;
+
+  for (i = 0; i < list->size - 1; i++) {
+    for (j = 0; j < list->size - i - 1; j++) {
+      if (list->array[j] > list->array[j + 1]) swap(list, j, j + 1);
+    }
+  }
+
+  return SUCCESS;
+}
+
+int selectionSort(ArrayList *list) {
+  int i, j, min;
+
+  for (i = 0; i < list->size - 1; i++) {
+    min = i;
+    for (j = i + 1; j < list->size; j++) {
+      if (list->array[j] < list->array[min]) min = j;
+
+      swap(list, min, i);
+    }
+  }
+
+  return SUCCESS;
+}
+
+int insertionSort(ArrayList *list) {
+  int i, j, num;
+
+  for (i = 1; i < list->size; i++) {
+    num = list->array[i];
+
+    j = i - 1;
+
+    while (j >= 0 && list->array[j] > num) {
+      list->array[j + 1] = list->array[j];
+      j--;
+    }
+
+    list->array[j + 1] = num;
+  }
+
+  return SUCCESS;
+}
+
+int ocurrance(ArrayList *list, int value) {
+  int i, total = 0;
+
+  for (i = 0; i < list->size; i++) {
+    if (list->array[i] == value) total++;
+  }
+
+  return total;
+}
+
+ArrayList *getIndexes(ArrayList *list, int value) {
+  int i, j = 0;
+  int total = ocurrance(list, value);
+  ArrayList *result = create(total);
+
+  for (i = 0; i < list->size; i++) {
+    if (list->array[i] == value) {
+      result->array[j] = i;
+      j++;
+    }
+  }
+
+  return result;
+}
+
+int min(ArrayList *list) {
+  int i, min = list->array[0];
+
+  for (i = 0; i < list->size; i++) {
+    if (list->array[i] < min) min = list->array[i];
+  }
+
+  return min;
+}
+
+int max(ArrayList *list) {
+  int i, max = list->array[0];
+
+  for (i = 0; i < list->size; i++) {
+    if (list->array[i] > max) max = list->array[i];
+  }
+
+  return max;
+}

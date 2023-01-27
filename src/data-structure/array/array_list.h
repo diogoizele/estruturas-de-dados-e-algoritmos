@@ -69,8 +69,7 @@ int blenderSort(ArrayList *list);
 // |          Search array.        |
 // *-------------------------------*
 
-int linearSearch(ArrayList *list, int value);
-int getIndex(ArrayList *list, int value);
+int ocurrance(ArrayList *list, int value);
 ArrayList *getIndexes(ArrayList *list, int value);
 int min(ArrayList *list);
 int max(ArrayList *list);
