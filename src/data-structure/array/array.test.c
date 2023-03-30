@@ -1,6 +1,7 @@
 #include "array.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "array.constants.h"
 
 void pause() {
   printf("Press any key to continue");
@@ -117,7 +118,7 @@ int main() {
             printf("Enter with index by element you want update: ");
             scanf("%d", &index);
 
-            response = insert(array, index, element);
+            response = update(array, index, element);
             if (response == SUCCESS) {
               printf("Success to update!\n");
             } else {
