@@ -20,3 +20,32 @@ typedef struct Array {
 - [array.test.c](array.test.c): contém os testes unitários das funções que manipulam o arranjo.
 
 > 👷‍♂️ **Dica**: Para executar os testes unitários, compile o arquivo `array.test.c` com o arquivo `array.c` com o comando `gcc array.test.c array.c` e execute o arquivo executável gerado.
+
+## Classe
+
+```cpp
+class Array {
+ private:
+  int size;
+  int *elements;
+
+ public:
+  Array(int size);
+  static Array *copy(Array *other);
+  int insert(int index, int element);
+  int exclude(int index);
+  int push(int element);
+  int update(int index, int element);
+  int reset();
+  void print();
+  int length();
+};
+```
+
+## Arquivos
+
+Versão da estrutura desenvolvida em C++.
+
+- [array.cpp.h](array.cpp.h): contém a definição da estrutura Array e as assinaturas das funções que manipulam o arranjo.
+- [array.cpp](array.cpp): contém a implementação das funções que manipulam o arranjo.
+- [array.test.cpp](array.test.cpp): contém os testes unitários das funções que manipulam o arranjo.
