@@ -6,8 +6,8 @@ Existem três tipos principais de estruturas de controle de fluxo: **sequencial*
 
 As estruturas de controle de fluxo são fundamentais na programação, pois permitem que os programas sejam mais flexíveis e capazes de lidar com uma variedade de situações diferentes. Com essas estruturas, os programadores podem criar soluções mais complexas e poderosas, permitindo que os programas respondam a eventos e entradas de dados em tempo real, sem intervenção humana.
 
-- [if/else](if-else.md)
-- [switch case](switch-case.md)
-- [while](while.md)
-- [do while]()
-- [for]()
+- [If/else](if-else.md)
+- [Switch/case](switch-case.md)
+- [While](while.md)
+- [Do while]()
+- [For]()

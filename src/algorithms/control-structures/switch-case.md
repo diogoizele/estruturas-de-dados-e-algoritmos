@@ -1,4 +1,4 @@
-# switch/case
+# Switch/case
 
 A estrutura de controle switch/case é uma estrutura de controle de fluxo que permite que o programa execute diferentes blocos de código dependendo do valor de uma variável ou expressão. É uma alternativa mais elegante do que uma sequência de estruturas if/else aninhadas para testar valores em um intervalo discreto.
 

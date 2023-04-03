@@ -1,4 +1,4 @@
-# if / else
+# If/else
 
 A estrutura de controle _if/else_ é uma forma de ramificação condicional em que o código decide qual bloco de código executar com base em uma condição. A ideia geral é que, se uma determinada condição for verdadeira, o bloco de código dentro do if será executado; caso contrário, o bloco de código dentro do else será executado.
 
