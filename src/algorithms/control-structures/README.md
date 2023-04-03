@@ -1,44 +1,13 @@
 # Estruturas de controle
 
-## if / else
+Estruturas de controle de fluxo são mecanismos fornecidos pelas linguagens de programação para controlar a ordem em que as instruções de um programa são executadas. Elas permitem que o programa tome decisões e repita a execução de um conjunto de instruções várias vezes, de acordo com certas condições. Em outras palavras, as estruturas de controle de fluxo determinam o fluxo de execução do programa.
 
-A estrutura de controle _if/else_ é uma forma de ramificação condicional em que o código decide qual bloco de código executar com base em uma condição. A ideia geral é que, se uma determinada condição for verdadeira, o bloco de código dentro do if será executado; caso contrário, o bloco de código dentro do else será executado.
+Existem três tipos principais de estruturas de controle de fluxo: **sequencial**, **condicional** e **de repetição** (ou laços). As estruturas sequenciais são aquelas que executam uma sequência de instruções na ordem em que aparecem no código-fonte, sem desvios ou ramificações. As estruturas condicionais permitem que o programa tome decisões com base em condições, executando um bloco de instruções se uma determinada condição for verdadeira, ou outro bloco se a condição for falsa. As estruturas de repetição permitem que o programa execute um bloco de instruções várias vezes, até que uma determinada condição seja satisfeita.
 
-```cpp
-int idade = 20;
+As estruturas de controle de fluxo são fundamentais na programação, pois permitem que os programas sejam mais flexíveis e capazes de lidar com uma variedade de situações diferentes. Com essas estruturas, os programadores podem criar soluções mais complexas e poderosas, permitindo que os programas respondam a eventos e entradas de dados em tempo real, sem intervenção humana.
 
-if (idade >= 18) {
-   cout << "Você é maior de idade." << endl;
-}
-else {
-   cout << "Você é menor de idade." << endl;
-}
-```
-
-Neste exemplo, a condição é "idade >= 18", o que significa que se a idade for maior ou igual a 18, o bloco de código dentro do if será executado, caso contrário, o bloco de código dentro do else será executado.
-
-Você pode ter mais de uma condição em uma estrutura if/else usando a estrutura `else if` (também conhecida como elif ou else-if). Aqui está um exemplo:
-
-```cpp
-int nota = 7;
-
-if (nota >= 9) {
-   cout << "A" << endl;
-}
-else if (nota >= 8) {
-   cout << "B" << endl;
-}
-else if (nota >= 7) {
-   cout << "C" << endl;
-}
-else if (nota >= 6) {
-   cout << "D" << endl;
-}
-else {
-   cout << "F" << endl;
-}
-```
-
-Neste exemplo, o código decide a nota com base nas condições. Se a nota for maior ou igual a 9, o código escreve "A"; se a nota for maior ou igual a 8, mas menor que 9, o código escreve "B"; e assim por diante.
-
-Essa é uma estrutura muito útil na programação, pois permite que o código tome decisões com base em condições, tornando o programa mais flexível e adaptável a diferentes situações
+- [if/else](if-else.md)
+- [switch case](switch-case.md)
+- [while](while.md)
+- [do while]()
+- [for]()
