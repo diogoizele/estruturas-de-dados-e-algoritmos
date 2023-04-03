@@ -6,6 +6,13 @@
   "files.insertFinalNewline": true,
   "files.associations": {
     "stdlib.h": "c",
-    "array_list.h": "c"
+    "array_list.h": "c",
+    "array": "cpp",
+    "array.constants.h": "c",
+    "functional": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "iostream": "cpp"
   }
 }
