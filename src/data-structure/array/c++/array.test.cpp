@@ -1,8 +1,7 @@
+#include "array.cpp"
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
-#include "array.constants.h"
-#include "array.cpp.h"
 
 using namespace std;
 

@@ -1,7 +1,6 @@
-#include "array.h"
+#include "array.c"
 #include <stdio.h>
 #include <stdlib.h>
-#include "array.constants.h"
 
 void pause() {
   printf("Press any key to continue");
