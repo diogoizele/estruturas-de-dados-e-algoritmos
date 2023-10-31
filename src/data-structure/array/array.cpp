@@ -1,10 +1,32 @@
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
-#include "array.constants.h"
-#include "array.cpp.h"
+
+#define MEMORY_CLEANED -1
+#define SUCCESS 0
+#define INVALID_POSITION 1
+#define ARRAY_FULL 2
+#define INITIALIZED 3
+#define EMPTY 4
 
 using namespace std;
+
+class Array {
+ private:
+  int size;
+  int *elements;
+
+ public:
+  Array(int size);
+  static Array *copy(Array *other);
+  int insert(int index, int element);
+  int exclude(int index);
+  int push(int element);
+  int update(int index, int element);
+  int reset();
+  void print();
+  int length();
+};
 
 Array::Array(int size) {
   this->size = size;
