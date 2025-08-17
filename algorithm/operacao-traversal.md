@@ -8,4 +8,4 @@ A complexidade de espaço para uma operação de traversal em um array é consid
 
 | Estrutura | Linguagem | Código                                    |
 | --------- | --------- | ----------------------------------------- |
-| Array     | C         | [Clique aqui](array/operacao-traversal.c) |
+| Array     | C         | [Clique aqui](../data-structure/array/operacao-traversal.c) |

@@ -4,5 +4,5 @@ A operação de exclusão é uma operação de remoção de um elemento de uma e
 
 | Nome                   | Estrutura | Linguagem | Código                                     |
 | ---------------------- | --------- | --------- | ------------------------------------------ |
-| Operação de Exclusão   | Array     | C         | [Clique aqui](array/operacao-exclusao.c)   |
-| Operação de Exclusão 2 | Array     | C         | [Clique aqui](array/operacao-exclusao-2.c) |
+| Operação de Exclusão   | Array     | C         | [Clique aqui](../data-structure/array/operacao-exclusao.c)   |
+| Operação de Exclusão 2 | Array     | C         | [Clique aqui](../data-structure/array/operacao-exclusao-2.c) |

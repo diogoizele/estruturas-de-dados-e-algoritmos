@@ -6,8 +6,8 @@ Inserção é uma operação de adicionar um elemento em uma estrutura de dados.
 
 | Nome                 | Estrutura               | Linguagem | Código                                                                          |
 | -------------------- | ----------------------- | --------- | ------------------------------------------------------------------------------- |
-| Operação de Inserção | Array                   | C         | [Clique aqui](array/operacao-insercao.c)                                        |
-| Adicionar números    | Array                   | C         | [Clique aqui](array/adicionar-numeros-no-array.c)                               |
-| Push Back            | Array                   | C         | [Clique aqui](array/push-back.c)                                                |
-| Inserir no Início    | Lista Encadeada Simples | C         | [Clique aqui](linked-list/insercao-lista-encadeada-individualmente-no-inicio.c) |
-| Inserir no Final     | Lista Encadeada Simples | C         | [Clique aqui](linked-list/insercao-lista-encadeada-individualmente-no-final.c)  |
+| Operação de Inserção | Array                   | C         | [Clique aqui](../data-structure/array/operacao-insercao.c)                                        |
+| Adicionar números    | Array                   | C         | [Clique aqui](../data-structure/array/adicionar-numeros-no-array.c)                               |
+| Push Back            | Array                   | C         | [Clique aqui](../data-structure/array/push-back.c)                                                |
+| Inserir no Início    | Lista Encadeada Simples | C         | [Clique aqui](../data-structure/linked-list/insercao-lista-encadeada-individualmente-no-inicio.c) |
+| Inserir no Final     | Lista Encadeada Simples | C         | [Clique aqui](../data-structure/linked-list/insercao-lista-encadeada-individualmente-no-final.c)  |

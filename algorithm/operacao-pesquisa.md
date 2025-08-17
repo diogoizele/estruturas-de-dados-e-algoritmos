@@ -4,4 +4,4 @@ A operação de pesquisa é o processo de encontrar um elemento específico no a
 
 | Nome                 | Estrutura | Linguagem | Código                                   |
 | -------------------- | --------- | --------- | ---------------------------------------- |
-| Operação de Pesquisa | Array     | C         | [Clique aqui](array/operacao-pesquisa.c) |
+| Operação de Pesquisa | Array     | C         | [Clique aqui](../data-structure/array/operacao-pesquisa.c) |
