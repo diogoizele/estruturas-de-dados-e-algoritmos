@@ -1,34 +1,31 @@
 # Estrutura de Dados e Algoritmos
 
-## Visão geral
+Linguagens e frameworks abstraem a implementação, mas **não resolvem problemas de eficiência, memória ou complexidade**. Sem entender estruturas de dados e algoritmos, você vai depender de soluções prontas sem saber quando são inadequadas, criando código lento ou impossível de escalar. Frameworks mudam; lógica de dados e processamento é atemporal. Aprender isso é investir em **capacidade de raciocínio e autonomia**, não em tecnologia específica.
 
-Este repositório busca reunir, implementar e documentar toda minha tragetória num estudo minucioso em torno das mais diversas estruturas de dados e os algoritmos que as manipulam.
-
-## Recursos
-
-- [Estruturas de dados](src/data-structure/)
-- [Algoritmos](src/algorithms/)
+Este repositório reúne, implementa e documenta minha trajetória em um estudo aprofundado sobre as diversas estruturas de dados e os algoritmos que as manipulam.
 
 ## Estruturas de dados
 
-Uma estrutura de dados é uma forma específica de organizar e armazenar dados em um computador para que possam ser acessador e manipulados de forma eficiente.
+Estrutura de dados é a forma como a informação é organizada e armazenada na memória do computador para ser utilizada de maneira eficiente. Ela define **como os dados são dispostos** (contíguos ou não, hierárquicos ou lineares), **como podem ser acessados** (sequencial, direto, por chave, por ponteiro) e **quais operações** podem ser realizadas sobre eles (inserção, remoção, busca, atualização).
+
+![Estrutura de Dados](assets/estrutura-de-dados.png)
 
 ## Algoritmos
 
-Um algoritmo é um conjunto de instruções que descreve como resolver uma classe de problemas. Sendo assim, trata-se de um conjunto de regras que definem precisamente uma sequência de operações.
+Um algoritmo é um conjunto de instruções **precisas e finitas** que define **como resolver um problema ou executar uma tarefa**. Ele estabelece a **sequência exata de operações** a serem realizadas para chegar a um resultado.
+
+A eficiência de um algoritmo depende diretamente da estrutura de dados usada: um mesmo algoritmo pode ser rápido ou lento, consumir pouca ou muita memória, dependendo de como os dados estão organizados. Sem entender estruturas de dados, você não consegue criar algoritmos eficientes nem avaliar trade-offs de desempenho.
 
 ## Conceitos introdutórios
 
 Na computação, a unidade básica de informação é o **bit**, cujo valor compreende uma entre duas possibilidades mutuamente exclusivas. A ideia é análoga a um interruptor que pode estar ligado ou desligado. Abaixo estará esse e alguns outros conceitos introdutórios que serão necessários para o entendimento dos tópicos abordados no repositório.
 
-- [Bit](src/intro-concepts/bit-and-byte/bit.md)
-- [Byte](src/intro-concepts//bit-and-byte/byte.md)
+- [Bit](src/intro-concepts/bit-and-byte/bit.md) ou [Byte](src/intro-concepts//bit-and-byte/byte.md)?
 - [Inteiros binários e decimais](src/intro-concepts/data-types/binary-and-decimal-integer.md)
 - [Números reais](src/intro-concepts/data-types/floating-numbers.md)
 - [Strings e caracteres](src/intro-concepts/data-types/strings-and-chars.md)
 - [Hardware e software](src/intro-concepts/hardware-and-software/hardware-and-software.md)
 - [Ponteiros](src/intro-concepts/pointers/pointers.md)
-- [Arranjos](src/intro-concepts/array/array.md)
 
 ### Notação O - Big O Notation
 
@@ -47,12 +44,4 @@ A notação Grande O é usada para descrever o comportamento de um algoritmo em 
 
 Fonte: [Big O Cheat Sheet](https://www.bigocheatsheet.com/).
 
-### Principais Operações
-
-As principais ou mais comuns operações que podem ser executadas nas estruturas de dados são:
-
-- **Pesquisa**: Podemos pesquisar qualquer elemento em uma estrutura de dados.
-- **Classificação**: Podemos classificar os elementos de uma estrutura de dados em ordem crescente ou decrescente.
-- **Inserção**: Também podemos inserir o novo elemento em uma estrutura de dados.
-- **Atualização**: Também podemos atualizar o elemento, ou seja, podemos substituir o elemento por outro.
-- **Exclusão**: Também podemos executar a operação de exclusão para remover o elemento da estrutura de dados.
+![Big O](assets/big-o.png)
