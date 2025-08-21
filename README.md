@@ -10,6 +10,8 @@ Estrutura de dados é a forma como a informação é organizada e armazenada na 
 
 ![Estrutura de Dados](assets/estrutura-de-dados.png)
 
+- [Array](data-structure/array/)
+
 ## Algoritmos
 
 Um algoritmo é um conjunto de instruções **precisas e finitas** que define **como resolver um problema ou executar uma tarefa**. Ele estabelece a **sequência exata de operações** a serem realizadas para chegar a um resultado.
